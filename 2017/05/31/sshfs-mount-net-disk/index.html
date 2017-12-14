@@ -13,24 +13,25 @@
     
     
     
-    <title>Hello World | 神奇的战士 | 这个不辣～</title>
+    <title>从机sshfs访问主机文件系统 | 神奇的战士 | 这个不辣～</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="keywords" content="linux,tool">
+    <meta name="description" content="说明需要在PC主机(Linux)上编写代码,每次都要将代码拷贝到从机(Linux)上编译运行程序.这里用到scp命令 scp -r /主机/文件 从机名@192.168.x.x:从机目录/.利用sshfs可以直接在从机进行编译,省略拷贝步骤. 系统结构框图Linux 主机 &amp;lt;=====&amp;gt; Linux 从机 操作步骤 主机  sudo apt-get install openssh-s">
+<meta name="keywords" content="linux,tool">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://wangshub.github.io/2017/12/14/hello-world/index.html">
+<meta property="og:title" content="从机sshfs访问主机文件系统">
+<meta property="og:url" content="http://wangshub.github.io/2017/05/31/sshfs-mount-net-disk/index.html">
 <meta property="og:site_name" content="神奇的战士">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="说明需要在PC主机(Linux)上编写代码,每次都要将代码拷贝到从机(Linux)上编译运行程序.这里用到scp命令 scp -r /主机/文件 从机名@192.168.x.x:从机目录/.利用sshfs可以直接在从机进行编译,省略拷贝步骤. 系统结构框图Linux 主机 &amp;lt;=====&amp;gt; Linux 从机 操作步骤 主机  sudo apt-get install openssh-s">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-14T11:15:25.998Z">
+<meta property="og:updated_time" content="2017-05-31T14:57:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="从机sshfs访问主机文件系统">
+<meta name="twitter:description" content="说明需要在PC主机(Linux)上编写代码,每次都要将代码拷贝到从机(Linux)上编译运行程序.这里用到scp命令 scp -r /主机/文件 从机名@192.168.x.x:从机目录/.利用sshfs可以直接在从机进行编译,省略拷贝步骤. 系统结构框图Linux 主机 &amp;lt;=====&amp;gt; Linux 从机 操作步骤 主机  sudo apt-get install openssh-s">
     
         <link rel="alternate" type="application/atom+xml" title="神奇的战士" href="/atom.xml">
     
@@ -111,7 +112,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Hello World</div>
+        <div class="flex-col header-title ellipsis">从机sshfs访问主机文件系统</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -133,13 +134,15 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Hello World</h1>
+        <h1 class="title">从机sshfs访问主机文件系统</h1>
         <h5 class="subtitle">
             
-                <time datetime="2017-12-14T11:15:25.998Z" itemprop="datePublished" class="page-time">
-  2017-12-14
+                <time datetime="2017-05-31T13:16:00.000Z" itemprop="datePublished" class="page-time">
+  2017-05-31
 </time>
 
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/linux/">linux</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/linux/tool/">tool</a></li></ul></li></ul>
 
             
         </h5>
@@ -156,19 +159,21 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Quick-Start"><span class="post-toc-number">1.</span> <span class="post-toc-text"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Create-a-new-post"><span class="post-toc-number">1.1.</span> <span class="post-toc-text"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Run-server"><span class="post-toc-number">1.2.</span> <span class="post-toc-text"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generate-static-files"><span class="post-toc-number">1.3.</span> <span class="post-toc-text"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-number">1.4.</span> <span class="post-toc-text"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#说明"><span class="post-toc-number">1.</span> <span class="post-toc-text"><a href="#&#x8BF4;&#x660E;" class="headerlink" title="&#x8BF4;&#x660E;"></a>&#x8BF4;&#x660E;</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#系统结构框图"><span class="post-toc-number">2.</span> <span class="post-toc-text"><a href="#&#x7CFB;&#x7EDF;&#x7ED3;&#x6784;&#x6846;&#x56FE;" class="headerlink" title="&#x7CFB;&#x7EDF;&#x7ED3;&#x6784;&#x6846;&#x56FE;"></a>&#x7CFB;&#x7EDF;&#x7ED3;&#x6784;&#x6846;&#x56FE;</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#操作步骤"><span class="post-toc-number">3.</span> <span class="post-toc-text"><a href="#&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;" class="headerlink" title="&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;"></a>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</span></a></li></ol>
         </nav>
     </aside>
     
-<article id="post-hello-world"
+<article id="post-sshfs-mount-net-disk"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">Hello World</h1>
+        <h1 class="post-card-title">从机sshfs访问主机文件系统</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017-12-14 19:15:25" datetime="2017-12-14T11:15:25.998Z"  itemprop="datePublished">2017-12-14</time>
+            <time class="post-time" title="2017-05-31 21:16:00" datetime="2017-05-31T13:16:00.000Z"  itemprop="datePublished">2017-05-31</time>
 
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/linux/">linux</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/linux/tool/">tool</a></li></ul></li></ul>
+
 
 
             
@@ -179,15 +184,28 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <a id="more"></a>
+<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>需要在PC主机(Linux)上编写代码,每次都要将代码拷贝到从机(Linux)上编译运行程序.这里用到<code>scp</code>命令 <code>scp -r /主机/文件 从机名@192.168.x.x:从机目录/</code>.利用<code>sshfs</code>可以直接在从机进行编译,省略拷贝步骤.</p>
+<h1 id="系统结构框图"><a href="#系统结构框图" class="headerlink" title="系统结构框图"></a>系统结构框图</h1><p><strong>Linux 主机</strong> <em>&lt;=====&gt;</em> <strong>Linux 从机</strong></p>
+<h1 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h1><ol>
+<li><p>主机</p>
+<ul>
+<li><code>sudo apt-get install openssh-server</code></li>
+<li><code>ifconfig -a</code>获取局域网内 <em>IP地址</em></li>
+</ul>
+</li>
+<li><p>从机</p>
+<ul>
+<li><code>sudo apt-get install sshfs</code></li>
+<li><code>sshfs -o idmap=user -o reconnect host_name@192.168.20.236:/path/to/your/workspace /path/to/your/workspace</code></li>
+</ul>
+</li>
+<li><p>现在可以从从机开心地访问主机文件了</p>
+</li>
+</ol>
+<blockquote>
+<p><em>author</em> : Wangsong<br><br><em>mail</em> : easternslope@yeah.net</p>
+</blockquote>
 
         </div>
 
@@ -195,12 +213,12 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-12-14T11:15:25.998Z" itemprop="dateUpdated">2017-12-14 19:15:25</time>
+    Last updated: <time datetime="2017-05-31T14:57:30.000Z" itemprop="dateUpdated">2017-05-31 22:57:30</time>
 </span><br>
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/12/14/hello-world/" target="_blank" rel="external">http://wangshub.github.io/2017/12/14/hello-world/</a>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/05/31/sshfs-mount-net-disk/" target="_blank" rel="external">http://wangshub.github.io/2017/05/31/sshfs-mount-net-disk/</a>
         
     </div>
     <footer>
@@ -220,6 +238,8 @@
 
         <div class="post-footer">
             
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -228,7 +248,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://wangshub.github.io/2017/12/14/hello-world/&title=《Hello World》 — 神奇的战士&pic=http://wangshub.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://wangshub.github.io/2017/05/31/sshfs-mount-net-disk/&title=《从机sshfs访问主机文件系统》 — 神奇的战士&pic=http://wangshub.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -238,22 +258,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://wangshub.github.io/2017/12/14/hello-world/&title=《Hello World》 — 神奇的战士&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://wangshub.github.io/2017/05/31/sshfs-mount-net-disk/&title=《从机sshfs访问主机文件系统》 — 神奇的战士&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://wangshub.github.io/2017/12/14/hello-world/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://wangshub.github.io/2017/05/31/sshfs-mount-net-disk/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hello World》 — 神奇的战士&url=http://wangshub.github.io/2017/12/14/hello-world/&via=http://wangshub.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《从机sshfs访问主机文件系统》 — 神奇的战士&url=http://wangshub.github.io/2017/05/31/sshfs-mount-net-disk/&via=http://wangshub.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://wangshub.github.io/2017/12/14/hello-world/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://wangshub.github.io/2017/05/31/sshfs-mount-net-disk/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -273,14 +293,21 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/06/05/use-python-to-backup-markdown-images/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">使用python备份博客图床图片</h4>
+      </a>
+    </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2017/07/20/python-check-hosts-update/" id="post-next" class="post-nav-link">
+      <a href="/2017/05/29/python-data-structure-BST/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">python check hosts update</h4>
+        <h4 class="title">python 数据结构之二叉搜索树</h4>
       </a>
     </div>
   
@@ -383,7 +410,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://wangshub.github.io/2017/12/14/hello-world/&title=《Hello World》 — 神奇的战士&pic=http://wangshub.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://wangshub.github.io/2017/05/31/sshfs-mount-net-disk/&title=《从机sshfs访问主机文件系统》 — 神奇的战士&pic=http://wangshub.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -393,22 +420,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://wangshub.github.io/2017/12/14/hello-world/&title=《Hello World》 — 神奇的战士&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://wangshub.github.io/2017/05/31/sshfs-mount-net-disk/&title=《从机sshfs访问主机文件系统》 — 神奇的战士&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://wangshub.github.io/2017/12/14/hello-world/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://wangshub.github.io/2017/05/31/sshfs-mount-net-disk/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hello World》 — 神奇的战士&url=http://wangshub.github.io/2017/12/14/hello-world/&via=http://wangshub.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《从机sshfs访问主机文件系统》 — 神奇的战士&url=http://wangshub.github.io/2017/05/31/sshfs-mount-net-disk/&via=http://wangshub.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://wangshub.github.io/2017/12/14/hello-world/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://wangshub.github.io/2017/05/31/sshfs-mount-net-disk/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -419,7 +446,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3aSY7jQAwEQP//054HdEtIklIPqip0Mgxt4QPN7fOJj+/F8fOcq/Ov7nn1lM8bBwYGxrKM7+2RnFPlVT8nT8HAwDiBcR8Q74PjPaAafO+fe/k9BgYGRpD2Vb/p/XwYGBgYvdslr5UUqFdsDAwMjLyIvQ++eeMsSSJfrMUxMDAWZORd97///Mp8AwMDYynGU+3+p17r2zowMDD2ZuSPyVPAPHWbsDEwMM5hVFe7qowJJvn5CrEfAwNjO0Y+Kkga/dW0LxkSRAEXAwNjC8Y8actL2d6QsjDCxMDA2JQxv0V12SIP34XVDQwMjK0ZzQteC7jVBDH6K8HAwFickbfje4xqY665loGBgXEAo9fwejaATpp3GBgYezMmCxOF3DMYDOQ53uW7YWBgHMCotsnyYN1LFkfTDAwMjI0Y1WWLXrstf9G8eTfaGcHAwFiWkYfOfOWiem1y/i/XYmBgHMaYjDYnzbXR0zEwMLZmJMHx/5asORsDA+MERl6yTtpw1cWLwgoIBgbGMYzqOkUvZSw31JL0EQMD4wBGnt712mTN+eq8iMXAwFicMSlZn9p2mLTkmlU4BgbGUoxJmJu325LSNE8cMTAw9mZUg2y5EVYsiZsBFwMD4wBGHviSm1ZXLqrDCQwMDIwqo9pie6VkxcDAwAjCa28tLCl0o7EoBgbGAYy8oZZHvOqC1yTdxMDA2JvRy7vyxlz1pathFwMDY2vGPxZ+slC7HddjAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3a0WrDMAwF0P7/T2evg63OlewNqhw/FdrFPhkIWdLrFa/r23r3bf77nb/aWhgYGB/LuJZr/Zve838y1p+j3TEwMB7AWAfEZJv8EL29bs6MgYGBsTzc+jmnSBgYGBi9x62voO+Ou94RAwMDY+cSW90sL9tVL88YGBhPY+Tb///nP+lvYGBgfBTjKq6c2kv1egsDA2M249QFtVp0K19QkxQTAwNjNONsEb8arNewasEOAwNjHiMPeb1xihy2VfLDwMB4ACMPqb34ljQ184vxL99iYGCMZvRStCRo5s/cSQoxMDCewKgWtv6iX5qMcRT+AxgYGOMYvQGLPCzmR8yTyDIJAwNjBCNvT1aHJHpJZ7WBioGBMZuRH723zVlwNC2CgYExjrGTFOYjF0mwPjAhgoGBMZRRLcdXN8iTzmoIvpkZwcDAGMfoFeJ7pbSkfFa+1mJgYDySsTMA0TtiL/RjYGA8gbEzVNELpvv4m5QUAwNjKCO/QPaK9b1L7NawBQYGxlDGqRDcewXVtujbgIuBgfEARu9zrw1ZbZTevBQMDIyhjKu4TqV3O23O6P6NgYExiFEdFCskavEEVzXFTNJNDAyMeYw8yJ4qseVPLrwsDAyMBzDywLffdKymj1HIxsDAwChmmvnhqoH4WMDFwMAYzciPkl+De02FwrAFBgbGCMZ+MyBvNlQLbYfLbRgYGB/I2Lk65sWyXqmuGrIxMDDGMb4A7Oi8Knzje14AAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
