@@ -165,9 +165,9 @@
         <title>python mail sender</title>
         <pubTime>2017-07-20T14:22:06.000Z</pubTime>
         
-        <tag>Code</tag>
-         
         <tag>Python</tag>
+         
+        <tag>Code</tag>
          
         <tag>Mail</tag>
          
@@ -211,34 +211,6 @@
 
     
   <url>
-    <loc>http://wangshub.github.io/2017/05/25/Cmake-tutorial/</loc>
-    <lastmod>2017-07-13T03:28:54.652Z</lastmod>
-    <data>
-        <display>
-        <title>Cmake 模板</title>
-        <pubTime>2017-05-24T16:03:34.000Z</pubTime>
-        
-        <tag>Code</tag>
-         
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Programming" url="http://wangshub.github.io/categories/Programming/"/>
-          
-             
-              <breadCrumb title="Linux" url="http://wangshub.github.io/categories/Programming/Linux/"/>
-          
-             
-              <breadCrumb title="c/c++" url="http://wangshub.github.io/categories/Programming/Linux/c-c/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://wangshub.github.io/2017/05/29/python-data-structure-BST/</loc>
     <lastmod>2017-07-13T03:28:54.652Z</lastmod>
     <data>
@@ -262,6 +234,34 @@
           
              
               <breadCrumb title="algorithm" url="http://wangshub.github.io/categories/python/code/algorithm/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wangshub.github.io/2017/05/25/Cmake-tutorial/</loc>
+    <lastmod>2017-07-13T03:28:54.652Z</lastmod>
+    <data>
+        <display>
+        <title>Cmake 模板</title>
+        <pubTime>2017-05-24T16:03:34.000Z</pubTime>
+        
+        <tag>Code</tag>
+         
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Programming" url="http://wangshub.github.io/categories/Programming/"/>
+          
+             
+              <breadCrumb title="Linux" url="http://wangshub.github.io/categories/Programming/Linux/"/>
+          
+             
+              <breadCrumb title="c/c++" url="http://wangshub.github.io/categories/Programming/Linux/c-c/"/>
           
         </display>
     </data>
