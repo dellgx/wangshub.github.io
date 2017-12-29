@@ -165,9 +165,9 @@
         <title>python mail sender</title>
         <pubTime>2017-07-20T14:22:06.000Z</pubTime>
         
-        <tag>Code</tag>
-         
         <tag>Python</tag>
+         
+        <tag>Code</tag>
          
         <tag>Mail</tag>
          
@@ -204,36 +204,6 @@
           
              
               <breadCrumb title="Code" url="http://wangshub.github.io/categories/Python/Code/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wangshub.github.io/2017/05/29/python-data-structure-BST/</loc>
-    <lastmod>2017-07-13T03:28:54.652Z</lastmod>
-    <data>
-        <display>
-        <title>python 数据结构之二叉搜索树</title>
-        <pubTime>2017-05-29T15:06:12.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>code</tag>
-         
-        <tag>algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://wangshub.github.io/categories/python/"/>
-          
-             
-              <breadCrumb title="code" url="http://wangshub.github.io/categories/python/code/"/>
-          
-             
-              <breadCrumb title="algorithm" url="http://wangshub.github.io/categories/python/code/algorithm/"/>
           
         </display>
     </data>
@@ -285,6 +255,36 @@
           
              
               <breadCrumb title="Linux" url="http://wangshub.github.io/categories/Tool/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wangshub.github.io/2017/05/29/python-data-structure-BST/</loc>
+    <lastmod>2017-07-13T03:28:54.652Z</lastmod>
+    <data>
+        <display>
+        <title>python 数据结构之二叉搜索树</title>
+        <pubTime>2017-05-29T15:06:12.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>code</tag>
+         
+        <tag>algorithm</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://wangshub.github.io/categories/python/"/>
+          
+             
+              <breadCrumb title="code" url="http://wangshub.github.io/categories/python/code/"/>
+          
+             
+              <breadCrumb title="algorithm" url="http://wangshub.github.io/categories/python/code/algorithm/"/>
           
         </display>
     </data>
