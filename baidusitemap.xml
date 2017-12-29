@@ -165,9 +165,9 @@
         <title>python mail sender</title>
         <pubTime>2017-07-20T14:22:06.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Code</tag>
+         
+        <tag>Python</tag>
          
         <tag>Mail</tag>
          
@@ -239,29 +239,6 @@
 
     
   <url>
-    <loc>http://wangshub.github.io/2017/05/25/Atom-editor/</loc>
-    <lastmod>2017-07-13T03:28:54.652Z</lastmod>
-    <data>
-        <display>
-        <title>Atom editor</title>
-        <pubTime>2017-05-25T13:27:42.000Z</pubTime>
-        
-        <tag>Editor</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tool" url="http://wangshub.github.io/categories/Tool/"/>
-          
-             
-              <breadCrumb title="Linux" url="http://wangshub.github.io/categories/Tool/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://wangshub.github.io/2017/05/29/python-data-structure-BST/</loc>
     <lastmod>2017-07-13T03:28:54.652Z</lastmod>
     <data>
@@ -285,6 +262,29 @@
           
              
               <breadCrumb title="algorithm" url="http://wangshub.github.io/categories/python/code/algorithm/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wangshub.github.io/2017/05/25/Atom-editor/</loc>
+    <lastmod>2017-07-13T03:28:54.652Z</lastmod>
+    <data>
+        <display>
+        <title>Atom editor</title>
+        <pubTime>2017-05-25T13:27:42.000Z</pubTime>
+        
+        <tag>Editor</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://wangshub.github.io/categories/Tool/"/>
+          
+             
+              <breadCrumb title="Linux" url="http://wangshub.github.io/categories/Tool/Linux/"/>
           
         </display>
     </data>
